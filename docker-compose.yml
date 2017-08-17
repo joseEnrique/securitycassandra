@@ -1,0 +1,7 @@
+version: '3'
+services:
+    chnagepasswordcassandra:
+        image: changepassword
+        environment:
+          - CASSANDRA_IP=35.193.113.252
+          - CASSANDRA_PASSWORD=prueba
