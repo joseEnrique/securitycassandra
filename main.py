@@ -3,6 +3,7 @@ import logging
 import os
 from cassandra.cluster import Cluster, AuthenticationFailed
 from cassandra.auth import PlainTextAuthProvider
+from time import sleep
 
 log = logging.getLogger()
 log.setLevel('DEBUG')
@@ -27,3 +28,4 @@ while changed is False:
             log.error("Password already changed")
         else:
             log.warning("Waiting ..")
+            sleep(3)
